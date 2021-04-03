@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  hello-world-nginx-svc-lb
+spec:
+  selector:
+    app:  hello-world-nginx
+  type:  LoadBalancer
+  ports:
+  - protocol:  TCP
+    port:  80
+    targetPort:  80

@@ -1,0 +1,11 @@
+apiVersion: skaffold/v1beta2
+kind: Config
+build:
+  artifacts:
+  - image: gcr.io/$GOOGLE_CLOUD_PROJECT/hello-world-nginx
+  googleCloudBuild:
+    projectId: $GOOGLE_CLOUD_PROJECT
+deploy:
+  kubectl:
+    manifests:
+    - https://raw.githubusercontent.com/github.com/thescott/k8s-nginx/main/hello-world-nginx-deploy.yaml
