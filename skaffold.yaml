@@ -2,9 +2,9 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: gcr.io/$GOOGLE_CLOUD_PROJECT/hello-world
+  - image: gcr.io/turnkey-cyclist-245521/hello-world
   googleCloudBuild:
-    projectId: $GOOGLE_CLOUD_PROJECT
+    projectId: turnkey-cyclist-245521
 deploy:
   kubectl:
     manifests:
