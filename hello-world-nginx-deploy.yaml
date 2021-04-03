@@ -4,6 +4,9 @@ metadata:
   name: hello-world-nginx-deployment
 spec:
   replicas: 3
+  selector:
+    matchlables:
+      app: hello-world-nginx
   template:
     metadata:
       labels:
