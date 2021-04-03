@@ -12,8 +12,8 @@ spec:
   template:
     metadata:
       labels:
-        app: demo
+        app: hello-world-nginx
     spec:
       containers:
-        - name: demo
+        - name: hello-world-nginx
           image: gcr.io/turnkey-cyclist-245521/hello-world-nginx:latest
