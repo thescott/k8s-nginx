@@ -8,4 +8,4 @@ build:
 deploy:
   kubectl:
     manifests:
-    - https://raw.githubusercontent.com/github.com/thescott/k8s-nginx/main/hello-world-nginx-deploy.yaml
+    - https://github.com/thescott/k8s-nginx/blob/main/hello-world-nginx-deploy.yaml
