@@ -2,7 +2,7 @@
 
 set -x 
 set -e
-clusterID="$(terraform output subnetwork_name)"
+clusterID="$(terraform output cluster_name)"
 # Set your compute zone to match what your terraform is creating
 gcloud config set compute/zone us-central1-a
 
