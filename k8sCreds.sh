@@ -9,12 +9,13 @@ gcloud config set compute/zone us-central1-a
 # Authenticate to your newly created cluster 
 gcloud container clusters get-credentials $clusterID
 
-# Copy Kubernetes terraform file to here so you can continue
-cp k8s-setup/k8s.tf .
+# Apply the following because this CI example is set up for the deployment only
+# This yaml creates a service
+kubectl apply -f hello-world-nginx-svc.yaml
 
-# Moving tf init to here 
-terraform init
+# This yaml creates your ingress 
+kubectl apply -f hello-world-nginx-ingree.yaml
 
+# Create a loadbalancer 
+kubectl apply -f lb-hello-world-nginx-svc.yaml
 
-# Apply the copied .tf file
-terraform apply -auto-approve

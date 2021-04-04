@@ -1,4 +1,4 @@
 steps:
 - name: gcr.io/kaniko-project/executor:latest
   args: ["--dockerfile=./Dockerfile",
-         "--destination=gcr.io/$GOOGLE_CLOUD_PROJECT/hello-world-nginx:latest"]
+         "--destination=gcr.io/turnkey-cyclist-245521/hello-world-nginx:latest"]
