@@ -3,7 +3,10 @@ provider "google" {
   project     = var.project_id
   region      = var.region
 }
-
+# I want to use the default network 
+data "google_compute_network" "default" {
+  name = "default-us-central1"
+}
 
 # Use this data source to access the configuration of the Google Cloud provider 
 data "google_client_config" "current" {
