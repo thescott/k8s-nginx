@@ -14,7 +14,7 @@ gcloud container clusters get-credentials $clusterID
 kubectl apply -f hello-world-nginx-svc.yaml
 
 # This yaml creates your ingress 
-kubectl apply -f hello-world-nginx-ingree.yaml
+kubectl apply -f hello-world-nginx-ingress.yaml
 
 # Create a loadbalancer 
 kubectl apply -f lb-hello-world-nginx-svc.yaml
