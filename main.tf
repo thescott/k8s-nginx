@@ -23,8 +23,6 @@ resource "google_container_cluster" "default" {
   location           = var.location
   initial_node_count = 3
   min_master_version = data.google_container_engine_versions.default.latest_master_version
-  network            = google_compute_subnetwork.default.name
-  subnetwork         = google_compute_subnetwork.default.name
 
   provisioner "local-exec" {
     when    = destroy
@@ -32,13 +30,7 @@ resource "google_container_cluster" "default" {
   }
 }
 # Terraform will output this data once everything has been created
-output "network" {
-  value = google_compute_subnetwork.default.network
-}
 
-output "subnetwork_name" {
-  value = google_compute_subnetwork.default.name
-}
 
 output "cluster_name" {
   value = google_container_cluster.default.name
